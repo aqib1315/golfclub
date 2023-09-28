@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur{
+    height: 500px;
+    width: 500px;
+    background-color: #95c11e3a;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+}
+
+#nav{
+    height: 145px;
+    width: 100%;
+    padding: 0 140px;
+    gap: 50px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 99;
+}
+
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 100px;
+    font-weight: bolder;
+    position: relative;
+    color: white;
+}
+
+
+#page1 h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 1100;
+}
+
+#page1 p{
+    width: 550px;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#page2{
+    min-height: 40px;
+    width: 100%;
+    z-index: 10;
+}
+ 
+#scroller{
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+#scroller h4:hover{
+    color: #95C11E;
+}
+
+@keyframes scroll{
+    from{ 
+        transform: translateX(0);
+    }
+
+    to{ 
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    height: 100%;
+    width: 100%;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+}
+
+#about-us-in{
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3{
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+#about-us-in p{
+    line-height: 26px;
+    width: 550px;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cards-container{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 80%;
+    width: 20%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#card1{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLDCalmpDd1knZJmscqFjHgk2cCqHvxpI-LQ&usqp=CAU);
+}
+
+#card2{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVJz6JcMWbP2sxf-1OoO_2r3xZUK8xLvWEYg&usqp=CAU);
+}
+
+#card3{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_xuvYBlaOopq0D5aLzQxWeRPfDO_07cww8Q&usqp=CAU);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 17px;
+    padding-top: 80px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 25px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: 800;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page3>p{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    width: 60%;
+    text-align: center;
+}
+
+#page3 img{
+    position: absolute;
+    height: 60px;
+
+}
+
+#page3 #colon1{
+    left: 15%;
+    top: 25%;
+}
+
+#page4{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+}
+
+.elem{
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    font-size: 30px;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: all ease 0.5s;
+
+}
+
+.elem:hover h2{
+    color: white;
+    background-color: transparent;
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+#page4 h1{
+    font-size: 85px;
+    position: absolute;
+    top: -35%;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px white;
+}
+
+#footer{
+    height:20vh ;
+    width: 100%;
+    color: #000;
+    background: linear-gradient(to left bottom,#119F3A,#ACE022);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 170px;
+    z-index: 10;
+}
+
+#footer img{
+    height: 75px;
+}
+
+#golf{
+    font-size: 20px;
+}
+
+#cofee{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+@media(max-width:430px){
+    #nav{
+        height: 70px;
+        width: 100%;
+        padding: 0 3vw;
+        gap: 28px;
+        /* position: fixed; */
+        display: flex;
+        justify-content: flex-start;
+        z-index: 99;
+    }
+
+    #nav img{
+        max-height: 10vw;
+    }
+
+    #nav h4{
+        text-transform: uppercase;
+        font-weight: 250;
+        font-size: 1.8vw;
+    }
+
+    #page1{
+        height: 70vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        z-index: 10;
+    }
+
+    #page1 h1{
+        font-size: 12vw;
+        font-weight: bolder;
+        position: relative;
+        color: white;
+    }
+
+    #page1 h2{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 4vw;
+        font-weight: 1100;
+    }
+    
+    #page1 p{
+        margin-top: 10px;
+        width: 350px;
+        font-size: 3vw;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #page2{
+        max-height: 5px;
+        width: 100%;
+        z-index: 10;
+    }
+     
+    #scroller{
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+        z-index: 10;
+    }
+    
+    #scroller::-webkit-scrollbar{
+        display: none;
+    }
+
+    #scroller-in{
+        display: inline-block;
+        white-space: nowrap;
+        animation-name: scroll;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    #scroller h4{
+        display: inline-block;
+        font-size: 15vw;
+        font-weight: 900;
+        margin-right: 10px;
+        transition: all linear 0.5s;
+        color: transparent;
+        -webkit-text-stroke: 2px #95C11E;
+    }
+
+    #scroller h4:hover{
+        color: #95C11E;
+    }
+    
+    @keyframes scroll{
+        from{ 
+            transform: translateX(0);
+        }
+    
+        to{ 
+            transform: translateX(-100%);
+        }
+    }
+
+    #about-us{
+        height: 40vh;
+        width: 100%;
+        padding: 0 7px;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #about-us img{
+        height: 20vw;
+        width: 20vw;
+        border-radius: 3px;
+    }
+
+    #about-us-in{
+        width: 50%;
+        text-align: center;
+    }
+    
+    #about-us-in h3{
+        margin-top: 3px;
+        font-size: 5vw;
+        font-weight: 800;
+        margin-bottom: 30px;
+    }
+    
+    #about-us-in p{
+        line-height: 15px;
+        width: 180px;
+        font-size: 2.5vw;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #cards-container{
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .card{
+        height: 80%;
+        width: 22%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #card1{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLDCalmpDd1knZJmscqFjHgk2cCqHvxpI-LQ&usqp=CAU);
+    }
+    
+    #card2{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVJz6JcMWbP2sxf-1OoO_2r3xZUK8xLvWEYg&usqp=CAU);
+    }
+    
+    #card3{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_xuvYBlaOopq0D5aLzQxWeRPfDO_07cww8Q&usqp=CAU);
+    }
+    
+    .overlay{
+        height: 50vw;
+        width: 100%;
+        background-color: #95C11E;
+        padding: 10px;
+        padding-top: 7px;
+        opacity: 0;
+        transition: all ease 0.6s;
+    }
+    
+    .overlay h4{
+        color: #000;
+        font-size: 2vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+        font-family: 800;
+    }
+    
+    .overlay p{
+        color: #000;
+        font-size: 2vw;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .card:hover .overlay{
+        opacity: 1;
+    }
+
+    .card:hover{
+        transform: rotate3d(-1,1,0,20deg);
+    }
+    
+    #page3{
+        height: 100vh;
+        width: 100%;
+        background-color: #000;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #page3>p{
+        font-size: 3vw;
+        font-weight: 700;
+        line-height: 35px;
+        width: 70%;
+        text-align: center;
+    }
+    
+    #page3 img{
+        position: absolute;
+        height: 40px;
+    
+    }
+
+    #page3 #colon1{
+        left: 15%;
+        top: 25%;
+    }
+    
+    #page4{
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+    }
+    
+    .elem{
+        height: 50%;
+        width: 26%;
+        overflow: hidden;
+        border-radius: 20px;
+        position: relative;
+    }
+    
+    .elem h2{
+        height: 100%;
+        width: 100%;
+        background-color: #95C11E;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease 0.5s;
+        font-size: 3vw;
+        font-weight: 800;
+        position: absolute;
+        z-index: 10;
+    }
+    
+    .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.1;
+        transition: all ease 0.5s;
+    
+    }
+    
+    .elem:hover h2{
+        color: white;
+        background-color: transparent;
+    }
+    
+    .elem:hover img{
+        scale: 1;
+    }
+
+    #page4 h1{
+        font-size: 6vw;
+        position: absolute;
+        top: -2%;
+        font-weight: 900;
+        color: #000;
+        -webkit-text-stroke: 2px white;
+    }
+    
+    #footer{
+        height:20vh ;
+        width: 100%;
+        color: #000;
+        background: linear-gradient(to left bottom,#119F3A,#ACE022);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        z-index: 10;
+    }
+    
+    #footer img{
+        height: 10vw;
+    }
+    
+    #golf{
+        font-size: 2.5vw;
+    }
+    
+    #cofee{
+        font-size: 2.5vw;
+    }
+
+    #kent{
+        font-size: 2.5vw;
+    }
+
+
+}
