@@ -1,1 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Love 🌸</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --pink:#ff6f91;
+    --soft:#ffd1dc;
+    --dark:#0f172a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#0b1220,#141c2f);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Floating flowers */
+.flower{
+    position:fixed;
+    top:-50px;
+    font-size:24px;
+    animation:fall linear infinite;
+    opacity:0.7;
+    z-index:0;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:3.5rem;
+    color:var(--soft);
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 10%;
+    position:relative;
+    z-index:1;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:50px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.4);
+    margin-bottom:70px;
+}
+
+.card h2{
+    font-family:'Playfair Display',serif;
+    font-size:2.3rem;
+    margin-bottom:25px;
+    color:var(--pink);
+}
+
+.card p{
+    line-height:2;
+    font-size:1.05rem;
+    opacity:0.95;
+}
+
+/* Bouquet */
+.bouquet{
+    text-align:center;
+    font-size:2.8rem;
+    margin:30px 0;
+}
+
+/* Promise box */
+.promise{
+    border-left:4px solid var(--pink);
+    padding-left:25px;
+    margin-top:20px;
+    font-style:italic;
+}
+
+/* Button */
+button{
+    display:block;
+    margin:60px auto 0;
+    padding:16px 45px;
+    border:none;
+    border-radius:40px;
+    background:var(--pink);
+    color:#fff;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff3e6c;
+    transform:scale(1.08);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:40px 20px;
+    font-size:0.9rem;
+    opacity:0.6;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{font-size:2.4rem;}
+    section{padding:70px 6%;}
+    .card{padding:35px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Flowers -->
+<script>
+for(let i=0;i<25;i++){
+    let f=document.createElement("div");
+    f.className="flower";
+    f.innerHTML="🌸";
+    f.style.left=Math.random()*100+"vw";
+    f.style.animationDuration=5+Math.random()*5+"s";
+    f.style.fontSize=16+Math.random()*20+"px";
+    document.body.appendChild(f);
+}
+</script>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Happy Birthday<br>My Future Wife 🌷</h1>
+        <p>1st February — The day Allah sent beauty into my life</p>
+    </div>
+</div>
+
+<!-- STORY -->
+<section>
+<div class="card">
+<h2>Our Beginning</h2>
+<p>
+Humara rishta achanak nahi tha,
+yeh wo kahani hai jo dil ne likhi aur qismat ne maan li.
+Main maanta hoon hum seedha relation mein aaye,
+lekin meri taraf se is rishte ke liye
+sirf feelings nahi,
+<strong>niyyat, sabr aur imandari</strong> bhi thi.
+<br><br>
+Tum meri zindagi ka wo hissa ho
+jo waqt ke sath aur gehra hota gaya.
+Tumhari aadatein,
+tumhari pasand (khaaskar phool 🌸),
+aur tumhari khamoshiyan tak
+mujhe apni si lagti hain.
+</p>
+</div>
+
+<!-- APOLOGY -->
+<div class="card">
+<h2>A Small Apology From a Big Heart</h2>
+<p>
+Mujhe pata hai aaj hum perfect jagah par nahi kharay,
+narazgi hai, faaslay hain.
+Lekin yaqeen karo,
+meri muhabbat kabhi naraz nahi hoti.
+<br><br>
+Agar meri kisi baat ne,
+mere ego ne,
+ya meri kamzori ne tumhein dukh diya ho,
+to main sirf “sorry” nahi keh raha,
+main sudharna chahta hoon.
+Tumhein khona meri zindagi ka sab se bara khauf hai.
+</p>
+</div>
+
+<!-- BOUQUET -->
+<div class="card">
+<h2>A Bouquet Just For You</h2>
+<div class="bouquet">💐🌹🌸🌷🌺</div>
+<p>
+Tumhein phool pasand hain,
+is liye main yeh bouquet lafzon ka bana raha hoon.
+Har phool meri ek baat keh raha hai:
+<br><br>
+🌹 — meri wafadari  
+🌸 — meri narmi  
+🌷 — meri umeed  
+🌺 — meri mohabbat  
+💐 — mera wada  
+<br><br>
+Main chahta hoon ke
+tumhari zindagi hamesha in phoolon ki tarah
+mehakti rahe,
+chahe wo meri mojoodgi mein ho
+ya meri duaon mein.
+</p>
+</div>
+
+<!-- PROMISE -->
+<div class="card">
+<h2>My Promise</h2>
+<p class="promise">
+Main tumse wada karta hoon
+ke main perfect nahi,
+lekin sincere rahunga.
+Main har din tumhein choose karunga,
+har mushkil mein tumhara haath pakar kar chalunga,
+aur tumhari izzat, khushi aur mohabbat
+apni zimmedari banaunga.
+</p>
+</div>
+
+<button onclick="birthdayWish()">One Last Thing 💝</button>
+</section>
+
+<footer>
+Crafted with love, patience & hope ✨  
+— Someone who wants forever with you
+</footer>
+
+<script>
+function birthdayWish(){
+    alert("Happy Birthday ❤️\nTum meri zindagi ka sab se khoobsurat hissa ho.\nAaj bhi, aur hamesha.");
+}
+</script>
+
+</body>
+</html>
